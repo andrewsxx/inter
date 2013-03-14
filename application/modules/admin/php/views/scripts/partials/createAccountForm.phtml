@@ -1,0 +1,35 @@
+<form action="" method="POST">
+    <h1 class="title"></h1>
+    <input type="hidden" name="id_quantup" value="<?= $this->quantup->id ?>">
+    <p><?=$this->tr("Nombre del Presupuesto")?></p>
+    <input type="text" name="name" class="required">
+    <p><?=$this->tr("Imagen")?></p>
+    <div id="picture-response" style="display: none;"></div>
+    <img id="account-picture" src="" class="account-picture" width="100"/>
+    <div id="account-iframe-container">
+        <iframe src="<?= BASE_URL . "/private/account/iframe"?>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="height: 75px; width: 500px;"></iframe>
+    </div>
+    <h3><?=$this->tr("Periodo del Presupuesto")?></h3>
+    <p><?=$this->tr("Fecha de Inicio")?></p>
+    <input type="text" name="date_ini" class="date required" readonly='true'>
+    <p><?=$this->tr("Fecha de Finalizacion")?></p>
+    <input type="text" name="date_end" class="date required" readonly='true'>
+    <p>
+        <input id="is_independent" type="checkbox" name="is_independent"/>
+        <span><label for="is_independent"><?=$this->tr("Independiente")?></label></span>
+    </p>
+    <p><?=$this->tr("Detalles")?></p>
+    <textarea id="account-details" cols="40" rows="4"></textarea>
+    <span id="account-chars-label"><label class="charsLeft">140</label></span>
+    <p><?=$this->tr("Tipo de moneda")?></p>
+    <select name="id_currency">
+        <?php foreach ($this->currencys as $currency){?>
+            <?php if($currency->id == $this->user->id_currency){?>
+                <option value="<?= $currency->id?>" selected=""><?= $currency->name ?></option>
+            <?php } else {?>
+                <option value="<?= $currency->id?>"><?= $currency->name ?></option>
+            <?php }?>
+        <?php }?>
+    </select>
+    <input type="submit" value="" />  
+ </form>

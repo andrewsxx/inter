@@ -1,0 +1,11 @@
+<h2>Categorias</h2>
+<a href="<?= BASE_URL . "admin/categorias/crear"?>" class="create-category">Crear Categorias</a>
+<div>
+    <?php foreach($this->categories as $cat){?>
+        <div class="category-container">
+            <?= $cat->name?>|
+            <a href="<?= BASE_URL . "admin/categorias/editar?id=" . $cat->id?>"> Editar</a> | 
+            <a href="#" class="delete-category" data-id="<?= $cat->id?>"> Eliminar</a>
+        </div>
+    <?php }?>
+</div>

@@ -1,0 +1,31 @@
+<h1>Crear Producto</h1>
+
+<?php if($this->categories->count()) { ?>
+    <div class="response"></div>
+    <form action="" method="POST" id="create-category">
+        <div>
+            <label>Categoria</label>
+            <select name="product[id_category]">
+                <?php foreach($this->categories as $cat){?>
+                    <option value="<?= $cat->id ?>"> <?= $cat->name ?></option>
+                <?php }?>
+                
+            </select>
+        </div>
+        <div>
+            <label>Nombre</label>
+            <input type="" name="product[name]" class="required" />
+        </div>
+        <div>
+            <label>Detalles</label>
+            <textarea name="product[description]" cols="50" rows="5"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Crear"/>
+        </div>
+    </form>
+<?php } else { ?>
+    <div>
+        Debe existir al menos una categoria para poder crear un producto.
+    </div>
+<?php } ?>

@@ -1,0 +1,28 @@
+<?php $recover = array("action" => "recoverpass", "controller" => "session", "module" => "public") ?> 
+
+<div class="border-radius-0 color-grey-1 form-box padding-20px">
+
+    <form action="<?= $this->url($recover); ?>" method="POST">
+
+        <h3>Restablece tu contraseña</h3>
+        
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            id="input-email" 
+            type="text" 
+            name="email" 
+            class="required is_email input-text" 
+            placeholder="Correo electrónico"
+            /> 
+
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            type="submit" 
+            value="Restablecer" 
+            class="input-button"
+            />  
+
+    </form>
+</div>

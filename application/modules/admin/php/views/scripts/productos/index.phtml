@@ -1,0 +1,11 @@
+<h2>Productos</h2>
+<a href="<?= BASE_URL . "admin/productos/crear"?>" class="create-products">Crear Producto</a>
+<div>
+    <?php foreach($this->products as $product){?>
+        <div class="product-container">
+            <?= $product->name?>|
+            <a href="<?= BASE_URL . "admin/productos/editar?id=" . $product->id?>"> Editar</a> | 
+            <a href="#" class="delete-product" data-id="<?= $product->id?>"> Eliminar</a>
+        </div>
+    <?php }?>
+</div>

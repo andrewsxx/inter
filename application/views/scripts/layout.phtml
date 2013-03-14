@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd"> 
+
+<html>
+    <head>
+        <?php echo $this->render('headLinks.phtml'); ?>
+<!--        <link rel="stylesheet" type="text/css" href="<?= LINKS_URL ?>/css/public/index.css"/>-->
+    </head>
+
+    <body class="public">
+        <a href="#">Inicio</a>|
+        <a href="#">Productos</a>|
+        <a href="#">Categorias</a>|
+        <a href="#">Quienes somos</a>|
+        <a href="#">Contactenos</a>
+        <?= $this->layout()->content; ?>
+    </body>
+</html>

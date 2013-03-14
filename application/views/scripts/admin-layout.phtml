@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+    <head>
+
+        <title><?=$this->title?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <link rel="shortcut icon" href="<?=BASE_URL?>/assets/layouts/img/favicon.png" />
+
+        <?php echo $this->render('headLinks.phtml'); ?>
+
+    </head>
+
+    <body class="wv-blank-layout">
+        <div>
+            <a href="<?= BASE_URL . "admin" ?>">Inicio</a>|
+            <a href="<?= BASE_URL . "admin/productos" ?>">Productos</a>|
+            <a href="<?= BASE_URL . "admin/categorias" ?>">Categorias</a>
+        </div>
+        <?= $this->layout()->content; ?>
+
+        <div id="delete-popup-tpl" class="template" style="display: none;">
+            <?= $this->render("mustache/delete.phtml") ?>
+        </div>
+        <span id="js-time" style="display: none;"><?= time();?></span>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<h1>Editar categoria</h1>
+
+<?php if($this->category){?>
+    <div class="response"></div>
+    <form action="" method="POST" id="edit-category">
+        <div>
+            <label>Nombre</label>
+            <input type="" name="name" class="required" value="<?= $this->category->name?>"/>
+        </div>
+        <div>
+            <label>Detalles</label>
+            <textarea name="details" cols="50" rows="5"><?= $this->category->details?></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Editar"/>
+        </div>
+    </form>
+<?php } else { ?>
+    <div class="error">No existe categoria</div>
+<?php } ?>

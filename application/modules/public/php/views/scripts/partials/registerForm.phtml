@@ -1,0 +1,73 @@
+<?php $register = array("action" => "register", "controller" => "session", "module" => "public") ?>
+<
+
+
+<div id="register" class="border-radius-0 color-grey-1 form-box padding-20px">
+    <form action="<?= $this->url($register); ?>" method="POST" class="bg-color-transparent color-grey-1">
+
+        <h3>Regístrate con tu cuenta de correo</h3>
+
+        <h6 class="color-transparent">-</h6> <!--Separador-->
+
+        <input 
+            id="input-name" 
+            type="text" 
+            name="full_name" 
+            class="required input-text" 
+            placeholder="Nombre completo"
+            >
+
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            id="input-email" 
+            type="text" 
+            name="email" 
+            class="required is_email input-text" 
+            placeholder="Correo electrónico"
+            > 
+
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            type="password" 
+            name="password" 
+            class="input-password required input-text" 
+            placeholder="Contraseña"
+            >
+
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            type="password" 
+            name="confirm_password" 
+            class="input-password required input-text" 
+            is_equal_to="password" 
+            placeholder="Contraseña (nuevamente)"
+            />
+
+        <h6>-</h6> <!--Separador-->
+
+        <input 
+            class="input-button"
+            type="submit" 
+            value="Registrar" 
+            />
+    </form>
+    <h6>-</h6> <!--Separador-->
+    <p id="info" class="padding-0 margin-left-right-auto color-grey-1">Para mayor comodidad, puedes registrarte rápidamente usando una cuenta de 
+        <a 
+            id="google-login"
+            class="js-google-login" 
+            href="#">Google</a>
+        o una de 
+        <a 
+            id="facebook-login"
+            class="js-facebook-login" 
+            href="#">
+            Facebook
+        </a>.
+
+        <!--PENDIENTE: <div id="fb-root"></div> FB no funciona-->
+    </p>
+</div>

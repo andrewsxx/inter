@@ -1,0 +1,10 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^jsonrpc$ jsonrpc.php [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+php_value session.gc_maxlifetime 604800

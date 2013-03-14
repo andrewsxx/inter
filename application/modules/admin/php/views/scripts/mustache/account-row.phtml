@@ -1,0 +1,14 @@
+<div id="account-{{ id }}" class="account-container" data-id="{{ id }}">
+    <span class="js-account-picture">
+        {{#picture_url}}
+            <img src="{{ picture_url }}" width="50" />
+        {{/picture_url}}
+    </span> -
+    <a href="{{ accountUrl }}">
+        <span class="js-account-name">{{ name }}</span>
+    </a> 
+    - <span class="js-account-date_ini">{{ date_ini }}</span> 
+    - <span class="js-account-date_end">{{ date_end }}</span> 
+    - <span class="account-benefit">{{ benefit }}</span> - <a href="#" class="edit-account"><?= $this->tr("editar")?></a>
+    - <a href="#" class="delete-account"><?= $this->tr("eliminar")?></a>
+</div>

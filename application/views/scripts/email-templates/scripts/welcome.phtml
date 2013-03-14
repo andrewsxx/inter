@@ -1,0 +1,16 @@
+<?php
+    $recoverUrl = $this->user->getRecoverPassUrl();
+?>
+<?php if($this->mailVersion == 'text'){
+
+    echo "Hola" . " " . $this->user->full_name . ",";
+    echo "\n\n";
+    echo "Bienvenido a Quantups";
+} elseif($this->mailVersion == 'html') {?>
+    Hola <?php echo $this->user->full_name; ?>,
+    </br>
+    </br>
+    Bienvenido a Quantups
+<?php }?>
+    
+(<?php echo $this->mailVersion; ?>)

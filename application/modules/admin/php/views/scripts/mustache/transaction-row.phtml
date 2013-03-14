@@ -1,0 +1,11 @@
+<div id="transaction-{{ id }}" class="transaction-container js-transaction-{{ transactionType }}" data-id="{{ id }}">
+<!--    <a href="{{ accountUrl }}">-->
+        {{ dateClass }}
+        <span class="js-transaction-name">{{ name }}</span> - 
+        <span class="js-transaction-date" date="{{ timestampDate }}">{{ date }}</span> -
+        <span class="js-transaction-value">{{ value }}</span> -
+        <span class="js-transaction-{{ transactionType }}">{{ transactionType }}</span> -
+<!--    </a>-->
+        <a href="#" class="edit-transaction"><?= $this->tr("editar")?></a> -
+        <a href="#" class="delete-transaction"><?= $this->tr("eliminar")?></a>
+</div>

@@ -1,0 +1,37 @@
+<script language="javascript">
+    var BASE_URL = "<?= BASE_URL; ?>";
+    var LINKS_URL = "<?= LINKS_URL; ?>";
+    
+    window.Contabilidad = window.Contabilidad || {};
+    window.Contabilidad.controller = "<?= $this->controller; ?>";
+    window.Contabilidad.module = "<?= $this->module; ?>";
+    window.Contabilidad.action = "<?= $this->action; ?>";
+</script>
+
+ <title>Interpesaje</title>
+<!--Meta data-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="robots" content="ALL" />
+<meta name="description" content="Aplicación web para controlar fácilmente tus finanzas. Quantups es para ti." />
+<meta name="keywords" content="aplicación web, administración financiera, economía del hogar, cuentas, control de gastos, quantaps, quantupps, quantups, quantapps" />  <!--        PENDIENTE-->
+<!--/Meta data-->
+
+<link rel="stylesheet" type="text/css" href="<?= LINKS_URL ?>/css/jquery-ui-1.9.2.custom.css"/>
+<link rel="stylesheet" type="text/css" href="<?= LINKS_URL ?>/css/jquery.qtip.css"/>
+
+
+<link rel="shortcut icon" href="<?= LINKS_URL ?>favicon.ico" />
+
+<script src="<?= LINKS_URL ?>/js/library/jquery-1.7.2.min.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/Mustache.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/jquery-ui-1.9.2.custom.min.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/jquery.qtip.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/json2.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/jquery.zend.jsonrpc.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript" src="<?= LINKS_URL ?>/js/library/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="<?= LINKS_URL ?>/js/library/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="<?= LINKS_URL ?>/js/library/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script src="<?= LINKS_URL ?>/js/global.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/library/contabilidad/Validate.js" language="javascript" type="text/javascript"></script>
+<script src="<?= LINKS_URL ?>/js/<?= $this->module ?>/<?= $this->controller ?>/<?= $this->action ?>.js" language="javascript" type="text/javascript"></script>
+<?= $this->headScript(); ?>

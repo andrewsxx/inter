@@ -1,0 +1,14 @@
+<div id="create-mini-transaction-form">
+    <form action="" method="POST">
+        <h1></h1>
+        <p><?=$this->tr("Nombre")?></p>
+        <input type="text" name="name" class="required">
+        <p><?=$this->tr("Valor")?></p>
+        <input type="text" name="value" class="required money">
+        <input type="submit" value="<?= $this->tr("Crear")?>" />
+        <!--Remover div-->
+        <div>
+            <a href="#" class="more-options"> <?= $this->tr("Mas opciones...")?> </a>
+        </div>
+     </form>
+</div>

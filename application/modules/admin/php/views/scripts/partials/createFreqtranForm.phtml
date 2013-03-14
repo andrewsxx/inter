@@ -1,0 +1,38 @@
+<form action="" method="POST">
+    <h1><?=$this->tr("Adicionar")?></h1>
+    <p><?=$this->tr("Nombre")?></p>
+    <input type="text" name="name" class="required">
+    <input type="hidden" name="id" value="0">
+    <p><?=$this->tr("Fecha")?></p>
+    <input type="text" name="date" class="date" readonly="true">
+    <p>
+    <p><?=$this->tr("Categoria")?></p>
+    <select name="id_category_type">
+        <?php foreach($this->categories as $category){ ?>
+            <?php if($category->id == 9) {?>
+                <option value="<?= $category->id ?>" selected=""><?= $category->name?></option>
+            <?php } else {?>
+                <option value="<?= $category->id ?>"><?= $category->name?></option>
+            <?php } ?>
+        <?php }?>
+    </select>
+    <p><?=$this->tr("Valor")?></p>
+    <input type="text" name="value" class="required money">
+    <p><?=$this->tr("Frecuencia")?></p>
+    <select name="frequency_days">
+        <option value="1"><?= $this->tr("diario");?></option>
+        <option value="7"><?= $this->tr("semanal");?></option>
+        <option value="14"><?= $this->tr("quincenal");?></option>
+        <option value="-1"><?= $this->tr("mensual");?></option>
+        <option value="0"><?= $this->tr("otro");?></option>
+    </select>
+    <input type="text" name="precise_frequency_days" disabled="true" class="input-disabled">
+    <p><?=$this->tr("Numero de repeticiones")?></p>
+    <select name="frequency_time">
+        <option value="0"><?= $this->tr("indefinido");?></option>
+        <?php for($i=1;$i<=30;$i++){ ?>
+            <option value="<?= $i ?>"><?= $i?></option>
+        <?php }?>
+    </select>
+    <input type="submit" value="<?= $this->tr("Crear")?>" />
+ </form>

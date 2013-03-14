@@ -1,0 +1,122 @@
+
+
+#main-inner-info-box {
+    margin: 0 auto;
+    width: 30%; /* valor fijo */
+    height: 420px;
+    border: 1.5px solid #063F4F;
+}
+
+#main-inner-slider-container {
+
+    /*margin-right: 2.75%;*/ 
+    width: 40%; /* valor fijo */
+    height: 420px;
+    /*max-height: 150%;*/
+    text-align:center;
+    overflow: hidden;
+}
+
+.slider-image {
+    /*    top: 0;
+        left: 0;*/
+    min-height:100%;
+    min-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#main-inner-promo-testimony {
+    margin-left: 2%; /* Si flota a la izquierda */
+    /*right: 35px;*/ 
+    /* Si flota a la izquierda */
+    width: 340px;
+    /*    padding: 20px;*/
+}
+
+/*#main-inner-promo-testimony > h1 {
+    font-size: 2.3em;
+}
+
+#main-inner-promo-testimony > p {
+    font-size: 1.27em;
+    line-height: 1.5em;
+    text-align: center;
+}*/ 
+
+#promo {
+    padding: 10% 0;
+    width: 80%;
+}
+.testimony {
+    padding-top: 15px;
+    /*margin: 0*/ 
+    font-size: 2.3em !important;
+    font-weight: bold;
+    font-weight: normal;
+}
+.testimony-face {
+    width: 34%;
+    padding-right: 5px;
+}
+.testimony p {
+    /*padding-right: 5%;*/
+    font-size: 0.54em !important;
+    font-weight: normal;
+    text-align: right !important;
+}
+h1.testimony-text {
+    padding-top: 18px;
+    font-size: 22pt !important;
+    font-weight: bold;
+    line-height: 25pt;
+}
+.testimony-text p {
+    padding: 15px 20px;
+    font-size: 1.4em !important;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+/*EXTRA CONTAINER*/
+#container-secondary {
+    width: 70%;
+    margin: 17% auto 5% auto;
+    padding: 15px;
+    /*height: 89%;*/
+
+    border: 1.5px solid #063F4F;
+
+}
+#container-secondary > h1 {
+    font-size: 3.2em;
+}
+#container-secondary > p {
+    font-size: 1.7em;
+    line-height: 1.5em;
+}
+
+/* Responsive Web Design */
+
+@media all and (max-width: 580px) {
+    #main-inner-slider-container, #container-secondary {
+        margin-top: 20px !important;
+        margin-bottom: 15px !important;
+
+        padding: 15px !important;
+        width: 85% !important;
+        height: auto;
+    }
+    #main-inner-promo-testimony {
+        margin-top: 10px !important;
+
+        width: 65% !important;
+        height: auto;
+        padding: 15px !important;
+    }
+    .testimony {
+        padding-top: 10px !important;
+        font-size: 135%;
+    }
+}
+

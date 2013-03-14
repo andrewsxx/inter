@@ -1,0 +1,23 @@
+<?php
+    $recoverUrl = $this->user->getRecoverPassUrl();
+?>
+<?php if($this->mailVersion == 'text'){
+
+    echo "Hola" . " " . $this->user->full_name . ",";
+    echo "\n\n";
+    echo "este es tu password:" . " '" . $this->password ."'";
+    echo "\n";
+    echo "si quieres cambiar tu contraseña ve a este link:";
+    echo $recoverUrl;
+} elseif($this->mailVersion == 'html') {?>
+    Hola <?php echo $this->user->full_name; ?>,
+    </br>
+    </br>
+    este es tu password: <?php echo $this->password; ?>
+    </br>
+    si quieres cambiar tu contraseña ve a este link:
+    </br>
+    <a href="<?php echo $recoverUrl; ?>"><?php echo $recoverUrl; ?></a>
+<?php }?>
+    
+(<?php echo $this->mailVersion; ?>)

@@ -1,0 +1,32 @@
+<h1>Editar Producto</h1>
+
+<?php if($this->categories->count()) { ?>
+    <div class="response"></div>
+    <form action="" method="POST" id="create-category">
+        <input type="hidden"  name="product[id]" value="<?= $this->product->id ?>" />
+        <div>
+            <label>Categoria</label>
+            <select name="product[id_category]">
+                <?php foreach($this->categories as $cat){?>
+                    <option value="<?= $cat->id ?>"> <?= $cat->name ?></option>
+                <?php }?>
+                
+            </select>
+        </div>
+        <div>
+            <label>Nombre</label>
+            <input type="" name="product[name]" value="<?= $this->product->name ?>" class="required" />
+        </div>
+        <div>
+            <label>Detalles</label>
+            <textarea name="product[description]" cols="50" rows="5"><?= $this->product->description ?></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Editar"/>
+        </div>
+    </form>
+<?php } else { ?>
+    <div>
+        Debe existir al menos una categoria para poder crear o editar un producto.
+    </div>
+<?php } ?>
